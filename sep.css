@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+.category-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+.category-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.category-options img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.category-options img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 400px;
+}
+.flashcard {
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  top: -100px;
+}
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.back {
+  transform: rotateY(180deg);
+}
+
+.front {
+  background-color: white;
+}
+.back {
+  background-color: #eee;
+}
+
+.html-flashcards .front {
+  background-color: #f06529 !important;
+}
+.html-flashcards .back {
+  background-color: #e34c26 !important;
+}
+
+.css-flashcards .front {
+  background-color: #2965f1 !important;
+}
+.css-flashcards .back {
+  background-color: #264de4 !important;
+}
+
+.nav-container {
+  position: absolute;
+  right: 2px;
+  bottom: -20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.nav-container img.nav-btn {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: none;
+}
+.topic {
+font-size: 25px;
+font-weight: bold;
+color: whitesmoke;
+margin-bottom: 30px;
+width: 100%;
+text-align: center;
+}

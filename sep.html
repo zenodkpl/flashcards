@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="sep.css"/>
+  <title>Flashcards</title>
+</head>
+<body>
+  <div id="category-container" class="category-container">
+    <div class="category-title">Select Category</div>
+    <div class="category-options">
+      <img src="html.png" alt="HTML Category" id="htmlChoice" />
+      <img src="css.png" alt="CSS Category" id="cssChoice" />
+    </div>
+  </div>
+  
+  <div id="flashcard-container" class="container" style="display:none;">
+    <div class="flashcard" id="card">
+      <div class="front" id="question"></div>
+      <div class="back" id="answer"></div>
+    </div>
+    <div class="nav-container">
+      <img src="left.png" alt="Previous" class="nav-btn" id="backBtn" />
+      <img src="right.png" alt="Next" class="nav-btn" id="nextBtn" />
+    </div>
+  </div>
+
+  <script src="sep.js"></script>
+</body>
+</html>
